@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Window</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            padding-top: 200px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .modalButton{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: black;
+            border-radius: 100px;
+            max-width: 200px;
+            height: 60px;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1;
+            border: 2px solid black;
+            transition: all .2s ease-in-out;
+        }
+        .modalButton:hover{
+            background-color: transparent;
+            color: black;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+        .modal-container{
+            max-width: 600px;
+            width: 100%;
+            min-height: 60px;
+            background-color: #444;
+            border-radius: 10px;
+            position: relative;
+        }
+        .modal-content{
+            padding: 30px;
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 20px;
+        }
+        .close{
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: 15px;
+            line-height: 1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+    <div class="container">
+        <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aperiam maiores laboriosam facere voluptatem, maxime nam consequuntur quo deleniti laborum quis, recusandae quae! Vero fuga est corporis perferendis cumque necessitatibus!
+        </h1>
+        <a href="#" class="modalButton" id="modalOpen">Открыть</a>
+    </div>
+    <script src="modalWindow.js"></script>
+</body>
+</html>

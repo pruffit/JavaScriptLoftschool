@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slider</title>
+</head>
+<body>
+    <style>
+        .container{
+            padding-top: 400px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .slider{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 500px;
+        }
+        .prevArrow,
+        .nextArrow{
+            text-decoration: none;
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background-color: #5D5FFC;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .prevArrow::before,
+        .nextArrow::before,
+        .prevArrow::after,
+        .nextArrow::after{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background-color: #5D5FFC;
+        }
+        .prevArrow::before{
+            left: 0;
+            top: 4px;
+            transform: rotate(45deg);
+        }
+        .prevArrow::after{
+            left: 0;
+            top: -4px;
+            transform: rotate(-45deg);
+        }
+        .nextArrow::before{
+            right: 0;
+            top: 4px;
+            transform: rotate(-45deg);
+        }
+        .nextArrow::after{
+            right: 0;
+            top: -4px;
+            transform: rotate(45deg);
+        }
+        .prevArrow{
+            left: 0;
+        }
+        .nextArrow{
+            right: 0;
+        }
+        .slider__inner{
+            width: 360px;
+            overflow: hidden;
+            border: 6px solid #47E975;
+            border-radius: 5px;
+        }
+        .list{
+            position: relative;
+            right: -390px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            transition: all .4s ease-in-out;
+        }
+        .item{
+            min-width: 100px;
+            height: 100px;
+            background-color:#5D5FFC;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 30px;
+            color: white;
+        }
+        .item:not(:last-child){
+            margin-right: 30px;
+        }
+    </style>
+    <div class="container">
+        <div class="slider">
+            <a href="#" class="prevArrow" id="prev"></a>
+            <div class="slider__inner">
+                <ul class="list" id="slider">
+                    <li class="item">
+                        1
+                    </li>
+                    <li class="item">
+                        2
+                    </li>
+                    <li class="item">
+                        3
+                    </li>
+                    <li class="item">
+                        4
+                    </li>
+                    <li class="item">
+                        5
+                    </li>
+                    <li class="item">
+                        6
+                    </li>
+                    <li class="item">
+                        7
+                    </li>
+                    <li class="item">
+                        8
+                    </li>
+                    <li class="item">
+                        9
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="nextArrow" id="next"></a>
+        </div>
+    </div>
+    <script src="simpleSlider.js"></script>
+</body>
+</html>
